@@ -33,7 +33,7 @@
     "@progress/kendo-data-query": "^1.5.2",
     "@progress/kendo-drawing": "^1.6.0",
     "@progress/kendo-theme-default": "latest",
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.3.1",
     "font-awesome": "4.7.0",
     "jquery": "3.3.1",
     "rxjs": "~6.4.0",
