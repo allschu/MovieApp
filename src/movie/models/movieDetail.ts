@@ -10,5 +10,10 @@ export class MovieDetail{
     vote_average: number;
     vote_count: number;
     revenue: number;
-    
+    poster_path:string;
+    genres: Genre[];
+}
+
+export class Genre{
+    name:string
 }

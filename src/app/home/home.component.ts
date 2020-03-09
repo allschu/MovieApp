@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieDetail } from 'src/movie/models/movieDetail';
+import { MovieService } from 'src/movie/movie.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public movieTrends: MovieDetail[] = null;
+
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
+    this.movieService.getTrendingMovies().subscribe((mov) => {
+      this.movieTrends = mov.results;
+    });
   }
 
 }
