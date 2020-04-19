@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   ngOnInit(): void {
-    console.log('init')
+    console.log('init');
   }
   title = 'MovieDb';
-  
-  
+
+
 }

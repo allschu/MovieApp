@@ -1,0 +1,9 @@
+{
+    "IdP": {
+        "Url": "https://localhost:5001",
+        "ClientId": "js_oidc",
+        "Scope": "openid profile email",
+        "ShowDebugInformation": true,
+        "RedirectUri": "https://localhost:5001/"
+    }
+}
