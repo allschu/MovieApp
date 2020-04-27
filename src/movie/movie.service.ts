@@ -22,11 +22,11 @@ export class MovieService {
   }
 
   public getPopularMovies(page: number): Observable<MovieResult> {
-    return this.http.get<MovieResult>('https://api.themoviedb.org/3/movie/popular?api_key=' + this.apiKey + '&language=en-US&page=' + page).pipe(map((res => res)));
+    return this.http.get<MovieResult>('https://movieapi-dev-as.azurewebsites.net/api/Movie/popular/' + page).pipe(map((res => res)));
   }
 
   public getMovie(movieId: number): Observable<MovieDetail> {
-    return this.http.get<MovieDetail>('https://api.themoviedb.org/3/movie/' + movieId + '?api_key=' + this.apiKey + '&language=en-US').pipe(map((res => res)));
+    return this.http.get<MovieDetail>('https://movieapi-dev-as.azurewebsites.net/api/Movie/' + movieId).pipe(map((res => res)));
   }
 
   public getMovieCredits(movieId: number): Observable<MovieCreditResult> {
