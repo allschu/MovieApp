@@ -11,6 +11,8 @@
     </div>
 
     <div class="col-md-4">
+        <h3 class="my-3">rating ({{movie.vote_count}} votes)</h3>
+        <p><bar-rating [(rate)]="movie.vote_average" [max]="10"></bar-rating></p>
         <h3 class="my-3">description</h3>
         <p>{{movie.overview}}</p>
         <h3 class="my-3">genres</h3>

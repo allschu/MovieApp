@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.trendingSubscription = this.movieService.getTrendingMovies().subscribe((mov) => {
-      this.movieTrends = mov.results;
+      this.movieTrends = mov.result;
     });
   }
 

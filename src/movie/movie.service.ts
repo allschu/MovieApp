@@ -38,6 +38,6 @@ export class MovieService {
   }
 
   public getTrendingMovies(): Observable<MovieTrendingResult> {
-    return this.http.get<MovieTrendingResult>('https://api.themoviedb.org/3/trending/movie/day?api_key=' + this.apiKey);
+    return this.http.get<MovieTrendingResult>('https://movieapi-dev-as.azurewebsites.net/api/Movie/trending');
   }
 }

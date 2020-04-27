@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieService } from './movie.service';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { StatePersistingService } from './state-persisting.service';
+import { BarRatingModule } from 'ngx-bar-rating';
 
 const secondaryRoutes: Routes = [
   { path: 'movie',  component: ListComponent },
@@ -19,6 +20,7 @@ const secondaryRoutes: Routes = [
     CommonModule,
     HttpClientModule,
     GridModule,
+    BarRatingModule,
     RouterModule.forChild(secondaryRoutes)
   ],
   providers: [MovieService, StatePersistingService]
