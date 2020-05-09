@@ -12,13 +12,13 @@
 
     <div class="col-md-4">
         <h3 class="my-3">rating ({{movie.vote_count}} votes)</h3>
-        <p><bar-rating [(rate)]="movie.vote_average" [max]="10"></bar-rating></p>
+        <p><bar-rating [(rate)]="movie_rating_average" [max]="10"></bar-rating></p>
         <h3 class="my-3">description</h3>
         <p>{{movie.overview}}</p>
-        <h3 class="my-3">genres</h3>
-        <ul>
-            <li *ngFor="let genre of movie.genres">{{genre.name}}</li>
-        </ul>
+        <h3 class="my-3">details</h3>
+        <p>Released: {{movie.release_date | date:'yyyy-MM-dd'}}<br/>
+        Status: {{movie.status}}<br/>
+        Revenue: {{movie.revenue | currency}}</p>
         <h3 class="my-3">cast</h3>
         <ul>
             <li *ngFor="let cast of movieCredits">{{cast.character}} - {{cast.name}}</li>

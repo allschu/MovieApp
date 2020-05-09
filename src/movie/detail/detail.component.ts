@@ -16,6 +16,8 @@ export class DetailComponent implements OnInit {
   public movie: MovieDetail = null;
   public movieCredits: MovieCredits[] = null;
   public movieRecommendations: MovieDetail[] = null;
+  
+  movie_rating_average: string;
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -23,6 +25,7 @@ export class DetailComponent implements OnInit {
       // get movie
       this.movieService.getMovie((parseInt(movieId))).subscribe((mov) => {
         this.movie = mov;
+        this.movie_rating_average  = mov.vote_average.toFixed();
       });
       // only show first twelve charaters
       this.movieService.getMovieCredits((parseInt(movieId))).subscribe((credits) => {
@@ -30,7 +33,6 @@ export class DetailComponent implements OnInit {
       });
       // show 4 recommendations
       this.movieService.getMovieRecommendations((parseInt(movieId))).subscribe((recommendations) => {
-        console.log(recommendations);
         this.movieRecommendations = recommendations.result.slice(0, 4);
       });
     });
