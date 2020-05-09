@@ -31,7 +31,7 @@ export class DetailComponent implements OnInit {
       // show 4 recommendations
       this.movieService.getMovieRecommendations((parseInt(movieId))).subscribe((recommendations) => {
         console.log(recommendations);
-        this.movieRecommendations = recommendations.results.slice(0, 4);
+        this.movieRecommendations = recommendations.result.slice(0, 4);
       });
     });
   }

@@ -1,6 +1,6 @@
 import { MovieCredits } from './movieCredits';
 
-export class MovieCreditResult{
+export class MovieCreditResult {
     id: number;
     cast: MovieCredits[];
 }

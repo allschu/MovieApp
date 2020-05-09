@@ -30,11 +30,11 @@ export class MovieService {
   }
 
   public getMovieCredits(movieId: number): Observable<MovieCreditResult> {
-    return this.http.get<MovieCreditResult>('https://api.themoviedb.org/3/movie/' + movieId + '/credits?api_key=' + this.apiKey).pipe(map(res => res));
+    return this.http.get<MovieCreditResult>('https://movieapi-dev-as.azurewebsites.net/api/Cast/' + movieId).pipe(map(res => res));
   }
 
   public getMovieRecommendations(movieId: number): Observable<MovieRecommendationResult> {
-    return this.http.get<MovieRecommendationResult>('https://api.themoviedb.org/3/movie/' + movieId + '/recommendations?api_key=' + this.apiKey + '&language=en-US&page=1')
+    return this.http.get<MovieRecommendationResult>('https://movieapi-dev-as.azurewebsites.net/api/Movie/recommendations/' + movieId);
   }
 
   public getTrendingMovies(): Observable<MovieTrendingResult> {
