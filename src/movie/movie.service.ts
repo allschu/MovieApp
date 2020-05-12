@@ -14,9 +14,6 @@ import { MovieTrendingResult } from './models/movieTrendingResult';
 })
 export class MovieService {
 
-  //for the open movie db
-  apiKey = '';
-
   constructor(private http: HttpClient) {
 
   }
@@ -39,5 +36,9 @@ export class MovieService {
 
   public getTrendingMovies(): Observable<MovieTrendingResult> {
     return this.http.get<MovieTrendingResult>('https://movieapi-dev-as.azurewebsites.net/api/Movie/trending');
+  }
+
+  public searchMovies(searchString: string, page: number) {
+    return this.http.get<MovieResult>(`https://movieapi-dev-as.azurewebsites.net/api/Movie/search?query=${searchString}&page=${page}`);
   }
 }

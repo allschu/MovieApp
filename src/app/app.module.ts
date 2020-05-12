@@ -10,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AuthService } from './auth/auth.service';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppConfig } from 'src/config/app.config';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -19,12 +21,14 @@ export function initializeApp(appConfig: AppConfig) {
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     OAuthModule.forRoot(),
+    FormsModule,
     BrowserAnimationsModule,
     MovieModule,
   ],

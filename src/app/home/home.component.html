@@ -19,7 +19,7 @@
                         <button type="button" [routerLink]="['/movie', movie.id]" routerLinkActive="router-link-active"  class="btn btn-sm btn-outline-secondary">View</button>
                         
                     </div>
-                    <small class="text-muted">{{movie.release_date}}</small>
+                    <small class="text-muted">{{movie.release_date | date }}</small>
                 </div>
             </div>
         </div>

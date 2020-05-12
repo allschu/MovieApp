@@ -13,9 +13,22 @@ import { Subscription } from 'rxjs';
 export class DetailComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute, private movieService: MovieService) { }
- 
 
-  public movie: MovieDetail = null;
+  public movie: MovieDetail = {
+    id: 0,
+    title: '',
+    genres: [],
+    original_title: '',
+    overview: '',
+    popularity: 0,
+    poster_path: '',
+    release_date: new Date(),
+    revenue: 0,
+    status: '',
+    tagline: '',
+    vote_average: 0, vote_count: 0
+  };
+
   public movieCredits: MovieCredits[] = null;
   public movieRecommendations: MovieDetail[] = null;
 
@@ -28,8 +41,8 @@ export class DetailComponent implements OnInit, OnDestroy {
   movie_rating_average: string;
 
   ngOnInit() {
-   this.routeSubscription = this.route.paramMap.subscribe(params => {
-      const movieId = +params.get('movieId');
+    this.routeSubscription = this.route.params.subscribe(params => {
+      const movieId = +params['movieId'];
       // get movie
       this.movieSubscription = this.movieService.getMovie(movieId).subscribe((mov) => {
         this.movie = mov;

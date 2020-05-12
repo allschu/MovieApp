@@ -1,4 +1,4 @@
-export class MovieDetail{
+export class MovieDetail {
     id: number;
     original_title: string;
     overview: string;
@@ -10,10 +10,10 @@ export class MovieDetail{
     vote_average: number;
     vote_count: number;
     revenue: number;
-    poster_path:string;
+    poster_path: string;
     genres: Genre[];
 }
 
-export class Genre{
-    name:string
+export class Genre {
+    name: string
 }

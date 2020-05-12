@@ -37,7 +37,7 @@ export class ListComponent {
       this.gridSettings = this.mapGridSettings(gridSettings);
       this.page = (gridSettings.state.skip / this.pageSize) + 1;
       this.loadItems(this.page);
-    }else{
+    } else {
       this.loadItems(1);
     }
   }
@@ -53,9 +53,9 @@ export class ListComponent {
   private loadItems(page): void {
     this.movieService.getPopularMovies(page).subscribe((movies: MovieResult) => {
       this.gridData = {
-        data: movies.results,
-        total: movies.total_results
-      }
+        data: movies.movies,
+        total: movies.total_Results
+      };
     });
   }
 
@@ -69,10 +69,10 @@ export class ListComponent {
       state,
     };
   }
-  
+
   public dataStateChange(state: State): void {
     this.gridSettings.state = state;
-}
+  }
 
   public saveGridSettings(): void {
     const gridConfig = {

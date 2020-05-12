@@ -1,8 +1,8 @@
 import { Movie } from './movie';
 
 export class MovieResult{
-    results: Movie[];
+    movies: Movie[];
     page: number;
-    total_results: number;
-    total_pages: number
+    total_Results: number;
+    total_Pages: number
 }
