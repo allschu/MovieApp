@@ -1,9 +1,9 @@
 {
     "IdP": {
-        "Url": "https://localhost:5001",
-        "ClientId": "js_oidc",
-        "Scope": "openid profile email",
+        "Url": "https://idsvr4.azurewebsites.net",
+        "ClientId": "spa",
+        "Scope": "openid profile email offline_access api",
         "ShowDebugInformation": true,
-        "RedirectUri": "https://localhost:5001/"
+        "RedirectUri": "https://localhost:4200/"
     }
 }

@@ -38,11 +38,16 @@ export class AuthService {
     // disablePKCI: true,
   };
 
-  constructor(private oauthService: OAuthService) { }
-
-  login() {
+  constructor(private oauthService: OAuthService) { 
     this.oauthService.configure(this.authCodeFlowConfig);
     this.oauthService.loadDiscoveryDocumentAndTryLogin();
-    this.oauthService.initCodeFlow();
+  }
+
+  login() {
+    this.oauthService.initCodeFlow();    
+  }
+
+  getAccessToken(){
+    this.oauthService.getAccessToken();
   }
 }
