@@ -6,4 +6,7 @@ export interface IAppConfig {
         ShowDebugInformation: boolean;
         RedirectUri: string
     };
+    Resource:{
+        Url:string
+    }
 }

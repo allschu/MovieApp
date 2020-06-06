@@ -12,7 +12,7 @@ export class AuthService {
     issuer: AppConfig.settings.IdP.Url,
 
     // URL of the SPA to redirect the user to after login
-    redirectUri: window.location.origin + '/',
+    redirectUri: AppConfig.settings.IdP.RedirectUri,
 
     // The SPA's id. The SPA is registerd with this id at the auth-server
     // clientId: 'server.code',
@@ -43,11 +43,11 @@ export class AuthService {
     this.oauthService.loadDiscoveryDocumentAndTryLogin();
   }
 
-  login() {
+  login(): void {
     this.oauthService.initCodeFlow();    
   }
 
-  getAccessToken(){
-    this.oauthService.getAccessToken();
+  getAccessToken(): string {
+    return this.oauthService.getAccessToken();
   }
 }
