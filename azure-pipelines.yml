@@ -28,5 +28,3 @@ steps:
     WebAppName: 'movie-app-allard'
     packageForLinux: '$(System.DefaultWorkingDirectory)/dist/MovieDb'
     RuntimeStack: 'NODE|12-lts'
-
-
