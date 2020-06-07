@@ -28,6 +28,6 @@ steps:
     WebAppName: 'movie-app-allard'
     packageForLinux: '$(System.DefaultWorkingDirectory)'
     RuntimeStack: 'NODE|12-lts'
-    StartupCommand: 'npm install npm start'
+    StartupCommand: 'npm install ./server/npm start'
 
 
