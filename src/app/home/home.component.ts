@@ -25,8 +25,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.trendingSubscription = this.movieService.getTrendingMovies().subscribe((mov) => {
       this.movieTrends = mov.result;
     });
-    var token = this.authService.getAccessToken();
-    console.log(token);
   }
 
   login(){
