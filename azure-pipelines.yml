@@ -26,8 +26,8 @@ steps:
     azureSubscription: 'Visual Studio Enterprise – MPN(a6d42328-7715-43e7-ab78-eca623de5fac)'
     appType: 'webAppLinux'
     WebAppName: 'movie-app-allard'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/MovieDb'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/*.zip'
     RuntimeStack: 'NODE|12-lts'
-    StartupCommand: 'npm start'
+    StartupCommand: 'npm install npm start'
 
 
