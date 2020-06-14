@@ -1,6 +1,6 @@
 {
     "IdP": {
-        "Url": "https://localhost:5001",
+        "Url": "https://allschu-idp.azurewebsites.net",
         "ClientId": "js_oidc",
         "Scope": "openid profile email",
         "ShowDebugInformation": true,
